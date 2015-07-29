@@ -1593,9 +1593,8 @@ void SurfaceFlinger::handleTransactionLocked(uint32_t transactionFlags)
                             // default orientation.
                             if(orient == DisplayState::eOrientationDefault and
                                     state.frame.isValid()) {
-                                qdutils::setViewFrame(disp->getHwcDisplayId(),
                                     state.frame.left, state.frame.top,
-                                    state.frame.right, state.frame.bottom);
+                                    state.frame.right, state.frame.bottom;
                             }
 #else
                             disp->setProjection(state.orientation,
